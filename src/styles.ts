@@ -4,7 +4,8 @@ export const cores = {
   cinza: '#333',
   preto: '#111',
   branca: '#EEE',
-  verde: '#10AC84'
+  verde: '#10AC84',
+  cinzaClaro: '#A3A3A3'
 }
 
 export const GlobalCss = createGlobalStyle`
