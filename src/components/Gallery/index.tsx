@@ -1,38 +1,25 @@
-import zoom from '../../assets/images/zoom.png'
-import play from '../../assets/images/play.png'
-import fechar from '../../assets/images/fechar.png'
-import { Action, Item, Items, Modal, ModalContent } from './styles'
-import { GalleryItem } from '../../Pages/Home'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
 import { useState } from 'react'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: spiderman
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ'
-  }
-]
+import Section from '../Section'
+
+import { Item, Items, Action, Modal, ModalContent } from './styles'
+
+import play from '../../assets/images/play.png'
+import zoom from '../../assets/images/zoom.png'
+import fechar from '../../assets/images/fechar.png'
+import { GalleryItem } from '../../Pages/Home'
 
 type Props = {
   defaultCover: string
   name: string
-  // items: GalleryItem[]
+  items: GalleryItem[]
 }
 
 interface ModalState extends GalleryItem {
   isVisible: boolean
 }
 
-const Gallery = ({ defaultCover, name }: Props) => {
+const Gallery = ({ defaultCover, name, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
@@ -59,31 +46,33 @@ const Gallery = ({ defaultCover, name }: Props) => {
 
   return (
     <>
-      <Items>
-        {mock.map((media, index) => (
-          <Item
-            key={media.url}
-            onClick={() => {
-              setModal({
-                isVisible: true,
-                type: media.type,
-                url: media.url
-              })
-            }}
-          >
-            <img
-              src={getMediaCover(media)}
-              alt={`Midia ${index + 1} de ${name}`}
-            />
-            <Action>
+      <Section title="Galeria" background="black">
+        <Items>
+          {items.map((media, index) => (
+            <Item
+              key={media.url}
+              onClick={() => {
+                setModal({
+                  isVisible: true,
+                  type: media.type,
+                  url: media.url
+                })
+              }}
+            >
               <img
-                src={getMediaIcon(media)}
-                alt="Clique para maximizar a mídia"
+                src={getMediaCover(media)}
+                alt={`Mídia ${index + 1} de ${name}`}
               />
-            </Action>
-          </Item>
-        ))}
-      </Items>
+              <Action>
+                <img
+                  src={getMediaIcon(media)}
+                  alt="Clique para maximar a mídia"
+                />
+              </Action>
+            </Item>
+          ))}
+        </Items>
+      </Section>
       <Modal className={modal.isVisible ? 'visivel' : ''}>
         <ModalContent className="container">
           <header>
