@@ -21,12 +21,12 @@ export const CartContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  // display: none;
+  display: none;
   justify-content: flex-end;
   z-index: 1;
 
-  display: flex;
   &.is-open {
+    display: flex;
   }
 `
 
@@ -105,5 +105,6 @@ export const CartItem = styled.li`
     position: absolute;
     top: 8px;
     right: 0;
+    cursos: pointer;
   }
 `
