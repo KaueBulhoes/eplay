@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 
 export const HeaderBar = styled.header`
-  display: flex;
   background-color: ${cores.cinza};
   padding: 24px;
   border-radius: 16px;
   margin-bottom: 80px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 
@@ -19,6 +19,10 @@ export const HeaderBar = styled.header`
   div {
     display: flex;
     align-items: center;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
   }
 `
 

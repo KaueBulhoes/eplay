@@ -8,6 +8,11 @@ export const cores = {
   cinzaClaro: '#A3A3A3'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const GlobalCss = createGlobalStyle`
   *{
     margin: 0;
