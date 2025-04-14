@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { TagContainter } from '../Tag/styles'
+import { TagContainer } from '../Tag/styles'
 import { Link } from 'react-router-dom'
 
 export const Card = styled(Link)`
@@ -19,7 +19,7 @@ export const Card = styled(Link)`
     object-fit: cover;
   }
 
-  ${TagContainter} {
+  ${TagContainer} {
     margin-right: 8px;
   }
 `

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TagContainter } from '../Tag/styles'
+import { TagContainer } from '../Tag/styles'
 
 export const Imagem = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ export const Imagem = styled.div`
     z-index: 1;
   }
 
-  ${TagContainter} {
+  ${TagContainer} {
     position: absolute;
     top: 32px;
   }

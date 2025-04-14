@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-import { TagContainter } from '../Tag/styles'
+import { TagContainer } from '../Tag/styles'
 
 export const Banner = styled.div`
   position: relative;
@@ -25,7 +25,7 @@ export const Banner = styled.div`
     opacity: 0.56;
   }
 
-  ${TagContainter} {
+  ${TagContainer} {
     margin-right: 8px;
   }
 
