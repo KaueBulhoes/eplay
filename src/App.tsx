@@ -5,7 +5,7 @@ import Header from './components/Header'
 import { GlobalCss } from './styles'
 
 import Rotas from './routes'
-import Footer from './components/Footer/inedx'
+import Footer from './components/Footer/index'
 import { store } from './store'
 import Cart from './components/Cart'
 
