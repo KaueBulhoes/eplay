@@ -3,6 +3,8 @@ import { colors } from '../../styles'
 
 export const Items = styled.ul`
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 `
 
 export const Action = styled.div`
@@ -20,7 +22,6 @@ export const Action = styled.div`
 `
 
 export const Item = styled.li`
-  margin-right: 16px;
   position: relative;
   cursor: zoom-in;
 
@@ -78,6 +79,12 @@ export const ModalContent = styled.div`
     h4 {
       font-size: 18px;
       font-weight: bold;
+    }
+
+    img {
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
     }
   }
 

@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 
-import fechar from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/fechar.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -40,6 +40,13 @@ export const Sidebar = styled.aside`
   ${ButtonContainer} {
     max-width: 100%;
     width: 100%;
+  }
+
+  .empty-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
   }
 `
 
@@ -97,7 +104,7 @@ export const CartItem = styled.li`
   }
 
   button {
-    background-image: url(${fechar});
+    background-image: url(${closeIcon});
     width: 16px;
     height: 16px;
     border: none;
@@ -105,6 +112,5 @@ export const CartItem = styled.li`
     position: absolute;
     top: 8px;
     right: 0;
-    cursos: pointer;
   }
 `

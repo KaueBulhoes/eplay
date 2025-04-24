@@ -458,7 +458,7 @@ const Checkout = () => {
             type="submit"
             onClick={form.handleSubmit}
             title="Clique aqui para finalizar a compra"
-            // disabled={isLoading}
+            disabled={isLoading}
           >
             {isLoading ? 'Finalizando compra...' : 'Finalizar compra'}
           </Button>
