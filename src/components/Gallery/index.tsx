@@ -6,7 +6,7 @@ import { Item, Items, Action, Modal, ModalContent } from './styles'
 
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import fechar from '../../assets/images/fechar.png'
+import close from '../../assets/images/fechar.png'
 import { GalleryItem } from '../../Pages/Home'
 
 type Props = {
@@ -73,12 +73,12 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
           ))}
         </Items>
       </Section>
-      <Modal className={modal.isVisible ? 'visivel' : ''}>
+      <Modal className={modal.isVisible ? 'is-visible' : ''}>
         <ModalContent className="container">
           <header>
             <h4>{name}</h4>
             <img
-              src={fechar}
+              src={close}
               alt="Ícone de fechar"
               onClick={() => {
                 closeModal()
